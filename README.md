@@ -3,3 +3,5 @@
 This example shows how to access an S3 bucket from R using the aws.s3 package. This method also works for buckets living outside the Research Gateway project. 
 
 More info: https://github.com/cloudyr/aws.s3
+
+NOTE: AWS Credentials must be kept separate from code and loaded from ~/.Renviron
