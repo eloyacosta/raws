@@ -17,5 +17,5 @@ save_object("framingham.csv", file = "/home/ez957/framingham.csv", bucket = "ez9
 # import dataset 
 data <- read.csv("/home/ez957/framingham.csv")
 class(data)
-retval <- subset(data, age == max(age))   #This willextract the details of the student who secured highest marks 
+retval <- subset(data, age == max(age))   #This willextract the details of the oldest patient
 View(retval)
