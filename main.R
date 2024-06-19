@@ -7,16 +7,11 @@ readRenviron("~/.Renviron")
 bucketlist()
 
 # get objects from buckets on the MGB AWS acccount 
-get_object("framingham.csv", bucket = "ez957-test0")
+get_object("framingham.csv", bucket = "ss3sklT-test0")
 # save file locally
-save_object("framingham.csv", file = "/home/ez957/framingham.csv", bucket = "ez957-test0")
+save_object("framingham.csv", file = "~/framingham.csv", bucket = "ss3sklT-test0")
 # import dataset 
-data <- read.csv("/home/ez957/framingham.csv")
+data <- read.csv("~/framingham.csv")
 class(data)
 retval <- subset(data, age == max(age))   #This will extract the details of the oldest patient
 View(retval)
-
-# get objects from buckets on the research gateway AWS account
-# NOTE: NOT WORKING 
-get_object("s3://rg-mgbrctdemo-ez957s3bucket-b5d/framingham.csv")
-s3load("framingham.csv", bucket = "rg-mgbrctdemo-ez957s3bucket-b5d")
